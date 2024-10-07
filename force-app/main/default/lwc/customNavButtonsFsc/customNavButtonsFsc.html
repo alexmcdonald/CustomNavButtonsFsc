@@ -1,0 +1,29 @@
+<template>
+	<template if:true={renderButtons}>
+		<div class="slds-m-top_large">
+			<div class="slds-grid slds-grid_align-spread">
+				<div class="slds-col">
+					<template for:each={leftButtons} for:item="button">
+						<lightning-button key={button.num} label={button.label} data-action={button.action}
+							onclick={handleAction} variant={button.variant} icon-name={button.icon}
+							icon-position={button.iconPosition} class={button.className}></lightning-button>
+					</template>
+				</div>
+				<div class="slds-col">
+					<template for:each={centerButtons} for:item="button">
+						<lightning-button key={button.num} label={button.label} data-action={button.action}
+							onclick={handleAction} variant={button.variant} icon-name={button.icon}
+							icon-position={button.iconPosition} class={button.className}></lightning-button>
+					</template>
+				</div>
+				<div class="slds-col">
+					<template for:each={rightButtons} for:item="button">
+						<lightning-button key={button.num} label={button.label} data-action={button.action}
+							onclick={handleAction} variant={button.variant} icon-name={button.icon}
+							icon-position={button.iconPosition} class={button.className}></lightning-button>
+					</template>
+				</div>
+			</div>
+		</div>
+	</template>
+</template>
